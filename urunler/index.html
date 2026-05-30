@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KM Serisi — Külünk Teknoloji'nin yerli gyro stabilizasyon ürünleri. KM-1 Kompakt, KM-3 Standart, KM-7 Profesyonel.">
+  <meta property="og:title" content="KM Serisi Ürünler — Külünk Teknoloji">
+  <meta property="og:description" content="KM-1, KM-3, KM-7 — 8 ila 35+ metre arası her tekne için yerli gyro stabilizasyon çözümleri.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/public/images/og-image.svg">
+  <title>KM Serisi Ürünler — Külünk Teknoloji</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Rajdhani:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .urunler-page-hero {
+      padding-block: calc(80px + var(--space-16)) var(--space-16);
+      background: var(--gradient-hero);
+      border-bottom: 1px solid var(--color-border-subtle);
+      text-align: center;
+    }
+    #urunler-page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      padding-block: var(--space-16);
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before { content: '▸ '; }
+    details[open] summary::before { content: '▾ '; }
+    @media (max-width: 1024px) {
+      #urunler-page-grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" role="navigation" aria-label="Ana Navigasyon">
+  <a href="/" class="nav-logo" aria-label="Külünk Teknoloji Ana Sayfa">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="44" height="44" rx="10" fill="url(#km-grad-u)"/>
+      <path d="M9 10 L9 34 L15 34 L15 24 L21 34 L28 34 L20 21 L27 10 L20 10 L15 19 L15 10 Z" fill="white"/>
+      <rect x="30" y="10" width="5" height="24" fill="rgba(255,255,255,0.9)"/>
+      <defs>
+        <linearGradient id="km-grad-u" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0066CC"/>
+          <stop offset="100%" stop-color="#0099CC"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="nav-logo-wordmark"><strong>Külünk</strong> Teknoloji</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/#teknoloji" class="nav-link">Teknoloji</a></li>
+    <li><a href="/urunler/" class="nav-link nav-link--active">Ürünler</a></li>
+    <li><a href="/#sektorler" class="nav-link">Sektörler</a></li>
+    <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <li><a href="/hakkimizda/" class="nav-link">Hakkımızda</a></li>
+    <li><a href="/iletisim/" class="nav-link">İletişim</a></li>
+  </ul>
+  <a href="/iletisim/" class="nav-cta">Teklif Al →</a>
+  <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-mobile-overlay">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<div id="nav-mobile-overlay" class="nav-mobile-overlay">
+  <nav>
+    <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;list-style:none;">
+      <li><a href="/#teknoloji" class="nav-mobile-link">Teknoloji</a></li>
+      <li><a href="/urunler/" class="nav-mobile-link">Ürünler</a></li>
+      <li><a href="/#sektorler" class="nav-mobile-link">Sektörler</a></li>
+      <li><a href="/blog/" class="nav-mobile-link">Blog</a></li>
+      <li><a href="/hakkimizda/" class="nav-mobile-link">Hakkımızda</a></li>
+      <li><a href="/iletisim/" class="nav-mobile-link">İletişim</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+  <div class="urunler-page-hero">
+    <div class="container">
+      <span class="section-label">KM Serisi</span>
+      <h1 class="section-title" style="font-size:var(--text-5xl);margin-bottom:var(--space-4);">Her Platform İçin Doğru Güç</h1>
+      <p class="section-subtitle" style="margin-inline:auto;">8 metreden 35 metrenin üzerine kadar hesaplanmış, test edilmiş ve sertifikalandırılmış yerli stabilizasyon çözümleri.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="urunler-page-grid" aria-label="Ürün listesi">
+      <!-- JS ile doldurulur -->
+      <div class="card" style="min-height:400px;"></div>
+      <div class="card" style="min-height:400px;"></div>
+      <div class="card" style="min-height:400px;"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:var(--space-8);">
+      <div class="footer-copy">© 2026 Külünk Teknoloji · İstanbul Teknopark</div>
+      <div class="footer-legal">
+        <a href="/">Ana Sayfa</a>
+        <a href="/iletisim/">İletişim</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module">
+  import Navbar      from '/assets/js/core/navbar.js';
+  import UrunlerPage from '/assets/js/pages/urunler.js?v=2';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    Navbar.init();
+    UrunlerPage.init();
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,756 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Külünk Teknoloji — İstanbul Teknopark'ta geliştirilen yerli ve milli deniz gyro stabilizasyon sistemleri. KM serisi ile dalgalara hükmedin.">
+  <meta name="keywords" content="gyro stabilizasyon, deniz stabilizatör, KM serisi, yerli teknoloji, İstanbul Teknopark, Külünk Teknoloji">
+  <meta property="og:title" content="Külünk Teknoloji — Deniz Stabilizasyon Sistemleri">
+  <meta property="og:description" content="Yerli ve milli gyro stabilizasyon teknolojisi. Dalgaları kontrol et, denize hâkim ol.">
+  <meta property="og:image" content="/public/images/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Külünk Teknoloji — Deniz Stabilizasyon Sistemleri</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Rajdhani:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav id="navbar" role="navigation" aria-label="Ana Navigasyon">
+  <a href="/" class="nav-logo" aria-label="Külünk Teknoloji Ana Sayfa">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+      <rect width="44" height="44" rx="10" fill="url(#km-grad)"/>
+      <path d="M9 10 L9 34 L15 34 L15 24 L21 34 L28 34 L20 21 L27 10 L20 10 L15 19 L15 10 Z" fill="white"/>
+      <rect x="30" y="10" width="5" height="24" fill="rgba(255,255,255,0.9)"/>
+      <polygon points="30,10 35,10 35,17" fill="rgba(255,255,255,0.6)"/>
+      <defs>
+        <linearGradient id="km-grad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0066CC"/>
+          <stop offset="100%" stop-color="#0099CC"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="nav-logo-wordmark"><strong>Külünk</strong> Teknoloji</span>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#teknoloji" class="nav-link">Teknoloji</a></li>
+    <li><a href="#urunler" class="nav-link">Ürünler</a></li>
+    <li><a href="#sektorler" class="nav-link">Sektörler</a></li>
+    <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
+    <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+  </ul>
+
+  <a href="#iletisim" class="nav-cta">Teklif Al →</a>
+
+  <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-mobile-overlay">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<!-- Mobile overlay -->
+<div id="nav-mobile-overlay" class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <nav>
+    <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;list-style:none;">
+      <li><a href="#teknoloji" class="nav-mobile-link">Teknoloji</a></li>
+      <li><a href="#urunler" class="nav-mobile-link">Ürünler</a></li>
+      <li><a href="#sektorler" class="nav-mobile-link">Sektörler</a></li>
+      <li><a href="/blog/" class="nav-mobile-link">Blog</a></li>
+      <li><a href="#hakkimizda" class="nav-mobile-link">Hakkımızda</a></li>
+      <li><a href="#iletisim" class="nav-mobile-link">İletişim</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section id="hero" aria-label="Ana Başlık">
+  <div class="hero-bg"></div>
+
+  <!-- SVG Waves -->
+  <div class="hero-waves" aria-hidden="true">
+    <svg id="hero-wave-svg" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;display:block;">
+      <path class="wave wave-1" fill="rgba(0,102,204,0.08)" d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,186.7C672,192,768,160,864,144C960,128,1056,128,1152,138.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L0,320Z"/>
+      <path class="wave wave-2" fill="rgba(0,153,204,0.06)" d="M0,224L48,208C96,192,192,160,288,154.7C384,149,480,171,576,165.3C672,160,768,128,864,117.3C960,107,1056,117,1152,128C1248,139,1344,149,1392,154.7L1440,160L1440,320L0,320Z"/>
+      <path class="wave wave-3" fill="rgba(0,80,160,0.04)" d="M0,288L48,266.7C96,245,192,203,288,197.3C384,192,480,224,576,218.7C672,213,768,171,864,160C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,320L0,320Z"/>
+    </svg>
+  </div>
+
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <!-- Particles -->
+  <div class="hero-particles" aria-hidden="true" id="hero-particles"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-badge reveal" data-delay="0">
+      <span class="badge-pulse"></span>
+      İstanbul Teknopark · Yerli Teknoloji
+    </div>
+
+    <h1 class="hero-title reveal" data-delay="1">
+      DALGALARI<br>
+      <span class="hero-title-em">KONTROL ET</span><br>
+      DENİZE HÂKİM OL
+    </h1>
+
+    <p class="hero-description reveal" data-delay="2">
+      Deniz araçları için yerli üretim gyro stabilizasyon sistemleri geliştiren AR-GE firması.
+      İstanbul Teknopark'ta doğan, Türk denizciliğini dönüştüren milli teknoloji.
+    </p>
+
+    <div class="hero-cta reveal" data-delay="3">
+      <a href="#teknoloji" class="btn btn-primary btn-lg">
+        Teknolojiyi Keşfet <span class="btn-arrow">→</span>
+      </a>
+      <a href="#urunler" class="btn btn-outline btn-lg">
+        Ürünleri İncele
+      </a>
+    </div>
+  </div>
+
+  <!-- Vessel SVG -->
+  <div class="hero-vessel" aria-hidden="true">
+    <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 160 Q200 80 380 120 L380 180 L20 180 Z" fill="rgba(0,102,204,0.3)" stroke="rgba(0,153,204,0.5)" stroke-width="1"/>
+      <rect x="150" y="60" width="120" height="100" rx="4" fill="rgba(0,80,160,0.2)" stroke="rgba(0,153,204,0.4)" stroke-width="1"/>
+      <rect x="170" y="30" width="80" height="50" rx="4" fill="rgba(0,60,140,0.2)" stroke="rgba(0,153,204,0.3)" stroke-width="1"/>
+      <line x1="210" y1="30" x2="210" y2="0" stroke="rgba(0,153,204,0.4)" stroke-width="1.5"/>
+      <line x1="190" y1="10" x2="230" y2="10" stroke="rgba(0,153,204,0.3)" stroke-width="1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ========== STATS ========== -->
+<section id="stats" aria-label="İstatistikler">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal" data-delay="1">
+        <span class="stat-number" data-target="20" data-suffix="+">0</span>
+        <span class="stat-label">Yıllık Sektör Deneyimi</span>
+      </div>
+      <div class="stat-item reveal" data-delay="2">
+        <span class="stat-number" data-target="3" data-suffix="">0</span>
+        <span class="stat-label">Ürün Serisi</span>
+      </div>
+      <div class="stat-item reveal" data-delay="3">
+        <span class="stat-number" data-target="12" data-suffix="">0</span>
+        <span class="stat-label">Teknik Patent</span>
+      </div>
+      <div class="stat-item reveal" data-delay="4">
+        <span class="stat-number" data-target="100" data-suffix="%">0</span>
+        <span class="stat-label">Yerli Mühendislik</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEKNOLOJİ ========== -->
+<section id="teknoloji" aria-labelledby="teknoloji-title">
+  <div class="container">
+    <div class="teknoloji-grid">
+      <!-- Text -->
+      <div class="teknoloji-text">
+        <span class="section-label reveal" data-delay="0">Yenilikçi Teknoloji</span>
+        <h2 class="section-title reveal" data-delay="1" id="teknoloji-title">Gyro Stabilizasyon Teknolojisi</h2>
+        <h3 class="reveal" data-delay="1" style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--color-accent-400);margin-bottom:var(--space-6);">Fiziğin Gücünü Denize Taşıyoruz</h3>
+
+        <p class="reveal" data-delay="2">
+          Gyro stabilizasyon teknolojisinin temeli, dönen kütlelerin doğada sahip olduğu eşsiz bir özelliğe dayanır: açısal momentum. Yüksek hızda dönen bir cisim, dönme eksenini koruma eğilimindedir. Bu fenomen jiroskopik rijidite olarak adlandırılır ve uzay aracı navigasyonundan bisiklet dengesine kadar pek çok alanda karşımıza çıkar. KM serisi, bu prensibi yüzlerce kilogram ağırlığındaki bir flywheel (volan) ile deniz platformlarına taşır.
+        </p>
+        <p class="reveal" data-delay="2">
+          KM serisinin kalbi, milisaniyeler içinde karar alabilen gelişmiş bir kontrol algoritmasıdır. Gemiye entegre edilen IMU (Atalet Ölçüm Birimi) sensörleri, anlık yalpa açısını, açısal hızı ve ivmeyi sürekli olarak ölçer. Bu veriler kontrol ünitesinde işlenerek flywheel'in konumlandırıldığı gimbal mekanizmasının açısı dinamik biçimde ayarlanır. Sonuç: gelen dalga hareketini tam karşı yönde iptal eden bir jiroskopik moment.
+        </p>
+        <p class="reveal" data-delay="3">
+          Geleneksel fin (döner kanat) stabilizatörlerinin aksine KM serisi, gemi hızından bağımsız çalışır. Demirleme, düşük süratte seyir veya tam hızda gidiş — sistem her koşulda etkin stabilizasyon sağlar. Su ile hiçbir hareketli temas yüzeyi bulunmadığından bakım gereksinimi minimumdur, ses düzeyi rakip teknolojilere kıyasla dramatik biçimde düşüktür.
+        </p>
+
+        <div class="teknoloji-features">
+          <div class="feature-card reveal" data-delay="3">
+            <div class="feature-card-icon" aria-hidden="true">⚡</div>
+            <div>
+              <div class="feature-card-title">Aktif Kontrol Sistemi</div>
+              <div class="feature-card-desc">Gerçek zamanlı IMU verisi ile milisaniye tepki süresi — her dalga frekansında optimum performans.</div>
+            </div>
+          </div>
+          <div class="feature-card reveal" data-delay="4">
+            <div class="feature-card-icon" aria-hidden="true">🔇</div>
+            <div>
+              <div class="feature-card-title">52 dB Altı Sessiz Çalışma</div>
+              <div class="feature-card-desc">Aktif titreşim söndürme ve özel izolasyon yatakları ile lüks kabin sessizliği garanti altında.</div>
+            </div>
+          </div>
+          <div class="feature-card reveal" data-delay="5">
+            <div class="feature-card-icon" aria-hidden="true">♻️</div>
+            <div>
+              <div class="feature-card-title">Enerji Geri Kazanımı</div>
+              <div class="feature-card-desc">Jeneratif damping teknolojisi ile mekanik enerji elektriğe dönüştürülür — net tüketim yüzde otuz azalır.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gyro Illustration -->
+      <div class="gyro-illustration reveal" data-delay="2" aria-hidden="true">
+        <div class="gyro-glow"></div>
+        <svg class="gyro-svg" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer static ring -->
+          <circle cx="190" cy="190" r="175" stroke="rgba(26,48,80,0.8)" stroke-width="2" fill="none"/>
+          <circle cx="190" cy="190" r="170" stroke="rgba(0,102,204,0.2)" stroke-width="1" fill="none"/>
+
+          <!-- Middle rotating ring -->
+          <g class="gyro-middle" style="transform-origin:190px 190px;">
+            <ellipse cx="190" cy="190" rx="130" ry="40" stroke="rgba(0,102,204,0.6)" stroke-width="2" fill="none" transform="rotate(-20,190,190)"/>
+            <ellipse cx="190" cy="190" rx="130" ry="40" stroke="rgba(0,153,204,0.4)" stroke-width="1" fill="none" transform="rotate(70,190,190)"/>
+            <circle cx="190" cy="190" r="125" stroke="rgba(0,102,204,0.3)" stroke-width="1.5" fill="rgba(11,34,64,0.4)"/>
+          </g>
+
+          <!-- Inner flywheel -->
+          <g class="gyro-inner" style="transform-origin:190px 190px;">
+            <circle cx="190" cy="190" r="80" fill="url(#flywheel-grad)" stroke="rgba(0,153,204,0.8)" stroke-width="2"/>
+            <circle cx="190" cy="190" r="60" stroke="rgba(0,153,204,0.4)" stroke-width="1" fill="none"/>
+            <circle cx="190" cy="190" r="20" fill="rgba(0,102,204,0.6)" stroke="rgba(0,153,204,0.8)" stroke-width="2"/>
+            <!-- Spokes -->
+            <line x1="190" y1="110" x2="190" y2="170" stroke="rgba(0,153,204,0.5)" stroke-width="1.5"/>
+            <line x1="190" y1="210" x2="190" y2="270" stroke="rgba(0,153,204,0.5)" stroke-width="1.5"/>
+            <line x1="110" y1="190" x2="170" y2="190" stroke="rgba(0,153,204,0.5)" stroke-width="1.5"/>
+            <line x1="210" y1="190" x2="270" y2="190" stroke="rgba(0,153,204,0.5)" stroke-width="1.5"/>
+          </g>
+
+          <!-- Wave force arrows (left — disruptive) -->
+          <g class="gyro-wave-arrows">
+            <path d="M30 160 L60 190 L30 220" stroke="rgba(255,100,100,0.6)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 150 L55 190 L15 230" stroke="rgba(255,80,80,0.4)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <!-- Counter arrows (right — stabilizing) -->
+          <g class="gyro-counter-arrows">
+            <path d="M350 220 L320 190 L350 160" stroke="rgba(0,204,136,0.8)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M365 230 L325 190 L365 150" stroke="rgba(0,204,136,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <!-- Labels -->
+          <text x="8" y="195" fill="rgba(255,80,80,0.7)" font-size="9" font-family="IBM Plex Mono, monospace" letter-spacing="1">DALGA</text>
+          <text x="325" y="195" fill="rgba(0,204,136,0.8)" font-size="9" font-family="IBM Plex Mono, monospace" letter-spacing="1">KM</text>
+
+          <defs>
+            <radialGradient id="flywheel-grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(0,80,160,0.8)"/>
+              <stop offset="100%" stop-color="rgba(0,40,100,0.9)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ÜRÜNLER ========== -->
+<section id="urunler" aria-labelledby="urunler-title">
+  <div class="container">
+    <div class="urunler-header">
+      <span class="section-label reveal" data-delay="0">KM Serisi</span>
+      <h2 class="section-title reveal" data-delay="1" id="urunler-title">Her Platform İçin Doğru Güç</h2>
+      <p class="section-subtitle reveal" data-delay="2" style="margin-inline:auto;text-align:center;">8 metreden 35 metrenin üzerine kadar her boyutta deniz aracı için hesaplanmış, test edilmiş ve sertifikalandırılmış yerli stabilizasyon çözümleri.</p>
+    </div>
+
+    <div class="urunler-grid">
+      <!-- KM-1 -->
+      <article class="card product-card reveal" data-delay="1" data-tilt>
+        <span class="product-card-series">KM-1</span>
+        <div class="product-card-header">
+          <div class="product-card-name">KOMPAKT</div>
+          <div class="product-card-target">8–20 m Motoryat & Tekne</div>
+        </div>
+        <div class="product-card-specs">
+          <div class="spec-item">
+            <span class="spec-value">40 kNm</span>
+            <span class="spec-label">Stabilizasyon Momenti</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">~180 kg</span>
+            <span class="spec-label">Sistem Ağırlığı</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">2.5 kW</span>
+            <span class="spec-label">Bekleme Gücü</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">IP67</span>
+            <span class="spec-label">Su Koruma Sınıfı</span>
+          </div>
+        </div>
+        <ul class="product-card-features">
+          <li class="feature-item">Titanyum gövde, IP67 sertifikalı</li>
+          <li class="feature-item">52 dB altı sessiz çalışma</li>
+          <li class="feature-item">CAN bus J1939 entegrasyonu</li>
+          <li class="feature-item">Mobil uygulama izleme</li>
+          <li class="feature-item">Gövde modifikasyonu yok</li>
+        </ul>
+        <a href="/urunler/#km-1" class="btn btn-outline btn-md" style="text-align:center;justify-content:center;">Detayları İncele →</a>
+      </article>
+
+      <!-- KM-3 FEATURED -->
+      <article class="card product-card product-card--featured reveal" data-delay="2" data-tilt>
+        <span class="product-card-badge">POPÜLER</span>
+        <span class="product-card-series">KM-3</span>
+        <div class="product-card-header">
+          <div class="product-card-name">STANDART</div>
+          <div class="product-card-target">20–35 m Motoryat & İş Gemisi</div>
+        </div>
+        <div class="product-card-specs">
+          <div class="spec-item">
+            <span class="spec-value">120 kNm</span>
+            <span class="spec-label">Stabilizasyon Momenti</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">~480 kg</span>
+            <span class="spec-label">Sistem Ağırlığı</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">5 kW</span>
+            <span class="spec-label">Bekleme Gücü</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">IP67</span>
+            <span class="spec-label">Su Koruma Sınıfı</span>
+          </div>
+        </div>
+        <ul class="product-card-features">
+          <li class="feature-item">Akıllı salınım kontrolü algoritması</li>
+          <li class="feature-item">CAN bus + Ethernet çift kanal</li>
+          <li class="feature-item">Uzak izleme ve OTA güncelleme</li>
+          <li class="feature-item">Otomatik devreye giriş</li>
+          <li class="feature-item">Enerji geri kazanım (Regen)</li>
+        </ul>
+        <a href="/urunler/#km-3" class="btn btn-primary btn-md" style="text-align:center;justify-content:center;">Detayları İncele →</a>
+      </article>
+
+      <!-- KM-7 -->
+      <article class="card product-card reveal" data-delay="3" data-tilt>
+        <span class="product-card-series">KM-7</span>
+        <div class="product-card-header">
+          <div class="product-card-name">PROFESYONEL</div>
+          <div class="product-card-target">35 m+ Süper Yat & Savunma</div>
+        </div>
+        <div class="product-card-specs">
+          <div class="spec-item">
+            <span class="spec-value">340 kNm</span>
+            <span class="spec-label">Stabilizasyon Momenti</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">~1100 kg</span>
+            <span class="spec-label">Sistem Ağırlığı</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">12 kW</span>
+            <span class="spec-label">Bekleme Gücü</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">IP68</span>
+            <span class="spec-label">Su Koruma Sınıfı</span>
+          </div>
+        </div>
+        <ul class="product-card-features">
+          <li class="feature-item">Çift ünite senkron konfigürasyon</li>
+          <li class="feature-item">IMO MSC.1/Circ.1627 uyumlu</li>
+          <li class="feature-item">Uydu bağlantısı ile global izleme</li>
+          <li class="feature-item">Özel API entegrasyonu</li>
+          <li class="feature-item">5 yıl kapsamlı garanti</li>
+        </ul>
+        <a href="/urunler/#km-7" class="btn btn-outline btn-md" style="text-align:center;justify-content:center;">Detayları İncele →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NASIL ÇALIŞIR ========== -->
+<section id="nasil-calisir" aria-labelledby="nasil-title">
+  <div class="container">
+    <div class="nasil-header">
+      <span class="section-label reveal" data-delay="0">Çalışma Prensibi</span>
+      <h2 class="section-title reveal" data-delay="1" id="nasil-title">5 Adımda Mükemmel Denge</h2>
+    </div>
+
+    <div class="steps-container" role="list">
+      <div class="step-item" role="listitem">
+        <div class="step-number">①</div>
+        <div class="step-title">Kurulum</div>
+        <div class="step-desc">KM sistemi geminin keel bölgesine monte edilir. Gövde modifikasyonu gerekmez.</div>
+        <div class="step-connector" aria-hidden="true"></div>
+      </div>
+      <div class="step-item" role="listitem">
+        <div class="step-number">②</div>
+        <div class="step-title">Algılama</div>
+        <div class="step-desc">IMU sensörleri yalpa açısını ve açısal hızı milisaniyelik hassasiyetle ölçer.</div>
+        <div class="step-connector" aria-hidden="true"></div>
+      </div>
+      <div class="step-item" role="listitem">
+        <div class="step-number">③</div>
+        <div class="step-title">Hesaplama</div>
+        <div class="step-desc">Kontrol algoritması optimum karşı-moment miktarını ve yönünü hesaplar.</div>
+        <div class="step-connector" aria-hidden="true"></div>
+      </div>
+      <div class="step-item" role="listitem">
+        <div class="step-number">④</div>
+        <div class="step-title">Karşı Moment</div>
+        <div class="step-desc">Gimbal açısı ayarlanır ve flywheel tam karşı yönde jiroskopik moment üretir.</div>
+        <div class="step-connector" aria-hidden="true"></div>
+      </div>
+      <div class="step-item" role="listitem">
+        <div class="step-number">⑤</div>
+        <div class="step-title">Stabilite</div>
+        <div class="step-desc">Yalpa hareketi %75'in üzerinde azaltılır. Konfor ve güvenlik maksimumda.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEKTÖRLER ========== -->
+<section id="sektorler" aria-labelledby="sektorler-title">
+  <div class="container">
+    <div class="sektorler-header">
+      <span class="section-label reveal" data-delay="0">Uygulama Alanları</span>
+      <h2 class="section-title reveal" data-delay="1" id="sektorler-title">Her Deniz Platformu İçin Çözüm</h2>
+      <p class="section-subtitle reveal" data-delay="2" style="margin-inline:auto;text-align:center;">KM serisi farklı boyutları ve konfigürasyonlarıyla denizcilik sektörünün tüm segmentlerine hizmet eder.</p>
+    </div>
+
+    <div class="sektorler-grid">
+      <div class="sektor-card reveal" data-delay="1">
+        <span class="sektor-icon" aria-hidden="true">🛥️</span>
+        <div class="sektor-name">Süper Yatlar</div>
+        <div class="sektor-desc">Lüks yat sahipleri için dalga konforunu maksimuma taşır, kabin sessizliğini korur.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="1">
+        <span class="sektor-icon" aria-hidden="true">🚢</span>
+        <div class="sektor-name">İş Gemileri</div>
+        <div class="sektor-desc">Personel emniyetini ve operasyonel verimliliği her hava koşulunda artırır.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="2">
+        <span class="sektor-icon" aria-hidden="true">⚓</span>
+        <div class="sektor-name">Savunma & Sahil Güvenlik</div>
+        <div class="sektor-desc">Her hava koşulunda görev başarısını ve silah sistemi doğruluğunu güvence altına alır.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="2">
+        <span class="sektor-icon" aria-hidden="true">🔬</span>
+        <div class="sektor-name">Araştırma Gemileri</div>
+        <div class="sektor-desc">Hassas bilimsel ölçümler için mutlak stabilite ve minimum titreşim sağlar.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="3">
+        <span class="sektor-icon" aria-hidden="true">🎣</span>
+        <div class="sektor-name">Balıkçı Tekneleri</div>
+        <div class="sektor-desc">Ağır deniz koşullarında güvenli ve verimli çalışma, personel yorgunluğunu azaltır.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="3">
+        <span class="sektor-icon" aria-hidden="true">⛴️</span>
+        <div class="sektor-name">Feribot & RoRo</div>
+        <div class="sektor-desc">Yolcu konforunu ve yük bütünlüğünü düzenli sefer koşullarında korur.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="4">
+        <span class="sektor-icon" aria-hidden="true">🌊</span>
+        <div class="sektor-name">Offshore Platformlar</div>
+        <div class="sektor-desc">Rüzgar enerjisi kurulum ve bakım gemileri için operasyonel pencereyi genişletir.</div>
+      </div>
+      <div class="sektor-card reveal" data-delay="4">
+        <span class="sektor-icon" aria-hidden="true">🤿</span>
+        <div class="sektor-name">Su Sporları</div>
+        <div class="sektor-desc">Dalış, sörf ve su sporları platformlarında stabil ve güvenli zemin sunar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DEMO ========== -->
+<section id="demo" aria-labelledby="demo-title">
+  <div class="container">
+    <div class="demo-content">
+      <div class="demo-play-wrapper reveal" data-delay="0" role="button" tabindex="0" aria-label="Tanıtım videosunu oynat" id="demo-play-btn">
+        <div class="demo-play-ring" aria-hidden="true"></div>
+        <div class="demo-play-ring" aria-hidden="true"></div>
+        <div class="demo-play-ring" aria-hidden="true"></div>
+        <div class="demo-play-btn" aria-hidden="true">
+          <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12,8 12,28 30,18" fill="white"/>
+          </svg>
+        </div>
+      </div>
+      <h2 class="demo-title reveal" data-delay="1" id="demo-title">Sistemin Gücünü İzleyin</h2>
+      <p class="demo-desc reveal" data-delay="2">
+        KM serisinin gerçek saha testlerinde nasıl performans gösterdiğini ve deniz koşullarını nasıl alt ettiğini izleyin.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true" aria-label="Tanıtım Videosu">
+  <div class="modal-container">
+    <button class="modal-close" id="modal-close" aria-label="Videoyu kapat">✕</button>
+    <iframe class="modal-iframe" id="modal-iframe" src="" title="KM Serisi Tanıtım Videosu" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- ========== BLOG ========== -->
+<section id="blog" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="blog-section-header">
+      <div>
+        <span class="section-label reveal" data-delay="0">Bilgi Merkezi</span>
+        <h2 class="section-title reveal" data-delay="1" id="blog-title">Deniz Teknolojisi Blogu</h2>
+      </div>
+      <a href="/blog/" class="btn btn-outline btn-md reveal" data-delay="1">Tüm Yazılar →</a>
+    </div>
+
+    <div class="blog-section-grid" id="blog-featured-grid">
+      <!-- JS ile doldurulur -->
+      <div class="blog-card">
+        <div class="blog-card-image"><div class="blog-card-image-placeholder" style="height:200px;"></div></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title" style="height:48px;background:var(--color-bg-elevated);border-radius:4px;"></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-image"><div class="blog-card-image-placeholder" style="height:200px;"></div></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title" style="height:48px;background:var(--color-bg-elevated);border-radius:4px;"></div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-image"><div class="blog-card-image-placeholder" style="height:200px;"></div></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title" style="height:48px;background:var(--color-bg-elevated);border-radius:4px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-section-footer">
+      <a href="/blog/" class="btn btn-outline btn-lg">Tüm Yazıları Gör →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HAKKIMIZDA ========== -->
+<section id="hakkimizda" aria-labelledby="hakkimizda-title">
+  <div class="container">
+    <div class="hakkimizda-grid">
+      <!-- Visual block -->
+      <div class="hakkimizda-visual reveal" data-delay="1" aria-hidden="true">
+        <div class="geo-block geo-block-1"></div>
+        <div class="geo-block geo-block-2"></div>
+        <div class="geo-block geo-block-3"></div>
+        <div class="geo-line-h" style="top:45%;left:10%;width:80%;"></div>
+        <div class="geo-line-v" style="left:40%;top:10%;height:80%;"></div>
+        <div class="geo-teknopark">
+          <span class="geo-teknopark-label">Kuluçka Merkezi</span>
+          <div class="geo-teknopark-title">İstanbul<br>Teknopark</div>
+        </div>
+        <div class="geo-dot" style="top:15%;left:15%;"></div>
+        <div class="geo-dot" style="top:75%;right:20%;background:var(--color-accent-400);"></div>
+        <div class="geo-dot" style="bottom:10%;left:40%;background:var(--color-success);box-shadow:0 0 10px var(--color-success);"></div>
+      </div>
+
+      <!-- Text -->
+      <div class="hakkimizda-text">
+        <span class="section-label reveal" data-delay="0">Biz Kimiz</span>
+        <h2 class="section-title reveal" data-delay="1" id="hakkimizda-title">Türk Denizciliğine Yerli Teknoloji</h2>
+
+        <p class="reveal" data-delay="2">
+          Külünk Teknoloji, Türkiye'nin deniz stabilizasyon alanındaki dışa bağımlılığını kırmak amacıyla İstanbul Teknopark bünyesinde kurulmuş bir AR-GE firmasıdır. Kuruluş felsefemiz basittir: Türk mühendisleri, Türkiye'nin denizlerinde ihtiyaç duyulan teknolojiyi üretebilir. Bu inançla başladığımız yolculuk, bugün KM serisi ile somut bir gerçeğe dönüşmüştür.
+        </p>
+        <p class="reveal" data-delay="2">
+          İstanbul Teknopark'taki AR-GE merkezimizde mekanik tasarım, kontrol elektroniği, yazılım mühendisliği ve deniz sistemleri uzmanlığını bir araya getiren çok disiplinli bir ekiple çalışıyoruz. Her KM modeli, yüzlerce saat sayısal simülasyon, titreşim analizi ve gerçek saha testinin ürünüdür. Tasarım kararlarımız fiziğe dayanır, kalite anlayışımız mühendislik mükemmeliyeti hedefine kilitlidir.
+        </p>
+        <p class="reveal" data-delay="3">
+          Vizyonumuz, Türkiye'yi yalnızca deniz teknolojisi tüketen değil; dünya standartlarında üreten bir ülke konumuna taşımaktır. KM serisi bu vizyonun ilk adımıdır. Geliştirdiğimiz her teknoloji, Türk denizciliğinin daha güçlü, daha güvenli ve daha rekabetçi olmasına katkı sağlar.
+        </p>
+
+        <div class="deger-kartlar reveal" data-delay="3">
+          <div class="deger-kart">
+            <span class="deger-kart-icon" aria-hidden="true">💡</span>
+            <div class="deger-kart-title">İnovasyon</div>
+          </div>
+          <div class="deger-kart">
+            <span class="deger-kart-icon" aria-hidden="true">⚙️</span>
+            <div class="deger-kart-title">Mühendislik Mükemmeliyeti</div>
+          </div>
+          <div class="deger-kart">
+            <span class="deger-kart-icon" aria-hidden="true">🇹🇷</span>
+            <div class="deger-kart-title">Yerli Üretim</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== İLETİŞİM ========== -->
+<section id="iletisim" aria-labelledby="iletisim-title">
+  <div class="container">
+    <div class="iletisim-header">
+      <span class="section-label reveal" data-delay="0">İletişim</span>
+      <h2 class="section-title reveal" data-delay="1" id="iletisim-title">Projenizi Konuşalım</h2>
+      <p class="section-subtitle reveal" data-delay="2" style="margin-inline:auto;">Teknik sorularınız, teklif talepleriniz veya iş birliği fırsatları için ekibimizle iletişime geçin.</p>
+    </div>
+
+    <div class="iletisim-grid">
+      <!-- Info -->
+      <div class="iletisim-info reveal" data-delay="1">
+        <p class="iletisim-intro">
+          KM serisi hakkında teknik bilgi almak, demo randevusu oluşturmak veya projenize özel teklif talep etmek için formu doldurun. Ekibimiz 24 saat içinde size ulaşır.
+        </p>
+
+        <ul class="contact-list" role="list">
+          <li class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div>
+              <span class="contact-label">Adres</span>
+              <span class="contact-value">İstanbul Teknopark, İstanbul, Türkiye</span>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📧</div>
+            <div>
+              <span class="contact-label">E-posta</span>
+              <a href="mailto:info@kulunkmakine.com" class="contact-value">info@kulunkmakine.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📱</div>
+            <div>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/kulunkmakine" class="contact-value" target="_blank" rel="noopener noreferrer">@kulunkmakine</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="social-links" role="list">
+          <a href="https://instagram.com/kulunkmakine" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          <a href="#" class="social-link" aria-label="GitHub">🐙</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="iletisim-form reveal" data-delay="2">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Ad Soyad <span class="required">*</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Ahmet Yılmaz" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">E-posta <span class="required">*</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="ahmet@firma.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Telefon</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+90 (___) ___ __ __" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Mesajınız <span class="required">*</span></label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tekne boyutu, kullanım amacı veya sorularınızı yazın..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+            Mesaj Gönder →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" aria-label="Külünk Teknoloji Ana Sayfa">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="44" height="44" rx="10" fill="url(#km-grad-f)"/>
+            <path d="M9 10 L9 34 L15 34 L15 24 L21 34 L28 34 L20 21 L27 10 L20 10 L15 19 L15 10 Z" fill="white"/>
+            <rect x="30" y="10" width="5" height="24" fill="rgba(255,255,255,0.9)"/>
+            <defs>
+              <linearGradient id="km-grad-f" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0066CC"/>
+                <stop offset="100%" stop-color="#0099CC"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="nav-logo-wordmark"><strong>Külünk</strong> Teknoloji</span>
+        </a>
+        <p>Yerli deniz stabilizasyon teknolojisi.<br>İstanbul Teknopark, İstanbul.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/kulunkmakine" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          <a href="#" class="social-link" aria-label="GitHub">🐙</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Ürünler</div>
+        <ul class="footer-links" role="list">
+          <li><a href="/urunler/#km-1" class="footer-link">KM-1 Kompakt</a></li>
+          <li><a href="/urunler/#km-3" class="footer-link">KM-3 Standart</a></li>
+          <li><a href="/urunler/#km-7" class="footer-link">KM-7 Profesyonel</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Sektörler</div>
+        <ul class="footer-links" role="list">
+          <li><a href="#sektorler" class="footer-link">Süper Yatlar</a></li>
+          <li><a href="#sektorler" class="footer-link">İş Gemileri</a></li>
+          <li><a href="#sektorler" class="footer-link">Savunma</a></li>
+          <li><a href="#sektorler" class="footer-link">Araştırma</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Firma</div>
+        <ul class="footer-links" role="list">
+          <li><a href="#hakkimizda" class="footer-link">Hakkımızda</a></li>
+          <li><a href="#teknoloji" class="footer-link">Teknoloji</a></li>
+          <li><a href="#iletisim" class="footer-link">Kariyer</a></li>
+          <li><a href="#iletisim" class="footer-link">İletişim</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links" role="list">
+          <li><a href="/blog/#teknoloji" class="footer-link">Teknoloji</a></li>
+          <li><a href="/blog/#sektor" class="footer-link">Sektör</a></li>
+          <li><a href="/blog/#firma" class="footer-link">Firma</a></li>
+          <li><a href="/blog/#teknik" class="footer-link">Teknik</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Külünk Teknoloji · İstanbul Teknopark · Tüm hakları saklıdır.</div>
+      <div class="footer-legal">
+        <a href="#">Gizlilik Politikası</a>
+        <a href="#">Kullanım Şartları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast container -->
+<div class="toast-container" id="toast-container" aria-live="polite" role="status"></div>
+
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
+

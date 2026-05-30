@@ -1,0 +1,40 @@
+:root {
+  /* Brand */
+  --color-primary-300:   #3399FF;
+  --color-primary-400:   #0080FF;
+  --color-primary-500:   #0066CC;
+  --color-primary-600:   #0052A3;
+  --color-accent-300:    #33CCFF;
+  --color-accent-400:    #00BBEE;
+  --color-accent-500:    #0099CC;
+
+  /* Backgrounds */
+  --color-bg-base:       #050A14;
+  --color-bg-surface:    #0D1B2E;
+  --color-bg-elevated:   #112240;
+  --color-bg-overlay:    #172B50;
+
+  /* Borders */
+  --color-border-subtle: #0F2035;
+  --color-border-default:#1A3050;
+  --color-border-strong: #264870;
+
+  /* Text */
+  --color-text-primary:  #E8EDF5;
+  --color-text-secondary:#B0BDD0;
+  --color-text-muted:    #8B9BB4;
+  --color-text-disabled: #4A5870;
+
+  /* Semantic */
+  --color-success:       #00CC88;
+  --color-warning:       #F0A500;
+  --color-error:         #FF4466;
+  --color-info:          #0099CC;
+
+  /* Gradients */
+  --gradient-brand:    linear-gradient(135deg, #0066CC 0%, #0099CC 100%);
+  --gradient-dark:     linear-gradient(180deg, #050A14 0%, #0D1B2E 100%);
+  --gradient-glow:     radial-gradient(ellipse at 50% 50%, rgba(0,102,204,0.18) 0%, transparent 70%);
+  --gradient-hero:     linear-gradient(160deg, #050A14 0%, #0D1B2E 55%, #0A1628 100%);
+  --gradient-card:     linear-gradient(160deg, #112240 0%, #0D1B2E 100%);
+}

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Külünk Teknoloji hakkında — İstanbul Teknopark'ta faaliyet gösteren yerli deniz stabilizasyon AR-GE firması.">
+  <meta property="og:title" content="Hakkımızda — Külünk Teknoloji">
+  <meta property="og:description" content="İstanbul Teknopark'ta faaliyet gösteren yerli deniz stabilizasyon AR-GE firması. 2021'den bugüne mühendislik mükemmeliyeti.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/public/images/og-image.svg">
+  <title>Hakkımızda — Külünk Teknoloji</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Rajdhani:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .about-hero {
+      padding-block: calc(80px + var(--space-16)) var(--space-16);
+      background: var(--gradient-hero);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .timeline {
+      position: relative;
+      padding-left: var(--space-12);
+      margin-top: var(--space-12);
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(180deg, var(--color-primary-500), var(--color-accent-500), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: var(--space-10);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: calc(-1 * var(--space-12) - 4px);
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-primary-400);
+      box-shadow: 0 0 10px var(--color-primary-400);
+    }
+    .timeline-year {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-accent-400);
+      letter-spacing: var(--tracking-widest);
+      margin-bottom: var(--space-2);
+    }
+    .timeline-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-2);
+    }
+    .timeline-desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: var(--leading-relaxed);
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" role="navigation" aria-label="Ana Navigasyon">
+  <a href="/" class="nav-logo" aria-label="Külünk Teknoloji Ana Sayfa">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="44" height="44" rx="10" fill="url(#km-grad-h)"/>
+      <path d="M9 10 L9 34 L15 34 L15 24 L21 34 L28 34 L20 21 L27 10 L20 10 L15 19 L15 10 Z" fill="white"/>
+      <rect x="30" y="10" width="5" height="24" fill="rgba(255,255,255,0.9)"/>
+      <defs>
+        <linearGradient id="km-grad-h" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0066CC"/>
+          <stop offset="100%" stop-color="#0099CC"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="nav-logo-wordmark"><strong>Külünk</strong> Teknoloji</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/#teknoloji" class="nav-link">Teknoloji</a></li>
+    <li><a href="/urunler/" class="nav-link">Ürünler</a></li>
+    <li><a href="/#sektorler" class="nav-link">Sektörler</a></li>
+    <li><a href="/blog/" class="nav-link">Blog</a></li>
+    <li><a href="/hakkimizda/" class="nav-link nav-link--active">Hakkımızda</a></li>
+    <li><a href="/iletisim/" class="nav-link">İletişim</a></li>
+  </ul>
+  <a href="/iletisim/" class="nav-cta">Teklif Al →</a>
+  <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-mobile-overlay">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<div id="nav-mobile-overlay" class="nav-mobile-overlay">
+  <nav>
+    <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;list-style:none;">
+      <li><a href="/#teknoloji" class="nav-mobile-link">Teknoloji</a></li>
+      <li><a href="/urunler/" class="nav-mobile-link">Ürünler</a></li>
+      <li><a href="/#sektorler" class="nav-mobile-link">Sektörler</a></li>
+      <li><a href="/blog/" class="nav-mobile-link">Blog</a></li>
+      <li><a href="/hakkimizda/" class="nav-mobile-link">Hakkımızda</a></li>
+      <li><a href="/iletisim/" class="nav-mobile-link">İletişim</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+  <div class="about-hero">
+    <div class="container">
+      <span class="section-label">Biz Kimiz</span>
+      <h1 class="section-title" style="font-size:var(--text-5xl);margin-bottom:var(--space-4);">Türk Denizciliğine<br>Yerli Teknoloji</h1>
+      <p class="section-subtitle" style="max-width:60ch;">İstanbul Teknopark'ta doğan, denizlere hükmetmek için tasarlanmış bir AR-GE firması.</p>
+    </div>
+  </div>
+
+  <!-- Hakkımızda main bölümü -->
+  <section id="hakkimizda">
+    <div class="container">
+      <div class="hakkimizda-grid">
+        <div class="hakkimizda-visual reveal" data-delay="1" aria-hidden="true">
+          <div class="geo-block geo-block-1"></div>
+          <div class="geo-block geo-block-2"></div>
+          <div class="geo-block geo-block-3"></div>
+          <div class="geo-line-h" style="top:45%;left:10%;width:80%;"></div>
+          <div class="geo-line-v" style="left:40%;top:10%;height:80%;"></div>
+          <div class="geo-teknopark">
+            <span class="geo-teknopark-label">AR-GE Merkezi</span>
+            <div class="geo-teknopark-title">İstanbul<br>Teknopark</div>
+          </div>
+          <div class="geo-dot" style="top:15%;left:15%;"></div>
+          <div class="geo-dot" style="top:75%;right:20%;background:var(--color-accent-400);"></div>
+          <div class="geo-dot" style="bottom:10%;left:40%;background:var(--color-success);box-shadow:0 0 10px var(--color-success);"></div>
+        </div>
+
+        <div class="hakkimizda-text">
+          <p class="reveal" data-delay="2">
+            Külünk Teknoloji, Türkiye'nin deniz stabilizasyon alanındaki dışa bağımlılığını kırmak amacıyla İstanbul Teknopark bünyesinde kurulmuş bir AR-GE firmasıdır. Kuruluş felsefemiz basittir: Türk mühendisleri, Türkiye'nin denizlerinde ihtiyaç duyulan teknolojiyi üretebilir. Bu inançla başladığımız yolculuk, bugün KM serisi ile somut bir gerçeğe dönüşmüştür.
+          </p>
+          <p class="reveal" data-delay="2">
+            İstanbul Teknopark'taki AR-GE merkezimizde mekanik tasarım, kontrol elektroniği, yazılım mühendisliği ve deniz sistemleri uzmanlığını bir araya getiren çok disiplinli bir ekiple çalışıyoruz. Her KM modeli, yüzlerce saat sayısal simülasyon, titreşim analizi ve gerçek saha testinin ürünüdür. Tasarım kararlarımız fiziğe dayanır, kalite anlayışımız mühendislik mükemmeliyeti hedefine kilitlidir.
+          </p>
+          <p class="reveal" data-delay="3">
+            Vizyonumuz, Türkiye'yi yalnızca deniz teknolojisi tüketen değil; dünya standartlarında üreten bir ülke konumuna taşımaktır. KM serisi bu vizyonun ilk adımıdır. Geliştirdiğimiz her teknoloji, Türk denizciliğinin daha güçlü, daha güvenli ve daha rekabetçi olmasına katkı sağlar.
+          </p>
+
+          <div class="deger-kartlar reveal" data-delay="3">
+            <div class="deger-kart">
+              <span class="deger-kart-icon">💡</span>
+              <div class="deger-kart-title">İnovasyon</div>
+            </div>
+            <div class="deger-kart">
+              <span class="deger-kart-icon">⚙️</span>
+              <div class="deger-kart-title">Mühendislik Mükemmeliyeti</div>
+            </div>
+            <div class="deger-kart">
+              <span class="deger-kart-icon">🇹🇷</span>
+              <div class="deger-kart-title">Yerli Üretim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div style="max-width:700px;margin-inline:auto;padding-top:var(--space-20);">
+        <span class="section-label reveal" data-delay="0">Yolculuğumuz</span>
+        <h2 class="section-title reveal" data-delay="1">Bugüne Nasıl Geldik</h2>
+        <div class="timeline reveal" data-delay="2">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2021</div>
+            <div class="timeline-title">Kuruluş ve İlk AR-GE</div>
+            <div class="timeline-desc">İstanbul Teknopark'ta kuruluş. Gyro stabilizasyon konsept çalışmaları ve ilk sayısal simülasyonlar başlatıldı.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2022</div>
+            <div class="timeline-title">Prototip Geliştirme</div>
+            <div class="timeline-desc">İlk KM-1 prototipi tamamlandı. Laboratuvar ortamında temel performans testleri gerçekleştirildi.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2023</div>
+            <div class="timeline-title">Saha Testleri</div>
+            <div class="timeline-desc">Marmara Denizi ve Ege'de kapsamlı saha testleri. Kontrol algoritması optimize edildi, KM-3 geliştirmeleri başladı.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+            <div class="timeline-title">KM Serisi Lansmanı</div>
+            <div class="timeline-desc">KM-1 ve KM-3 ürün olarak piyasaya çıktı. İlk kurumsal müşteri anlaşmaları imzalandı.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">KM-7 ve Savunma Segmenti</div>
+            <div class="timeline-desc">KM-7 Profesyonel serisi tamamlandı. IMO sertifikasyonu alındı. Savunma sanayi iş birlikleri başladı.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--color-accent-400);box-shadow:0 0 10px var(--color-accent-400);"></div>
+            <div class="timeline-year">2026 →</div>
+            <div class="timeline-title">Yapay Zeka Entegrasyonu</div>
+            <div class="timeline-desc">Makine öğrenmesi tabanlı dalga tahmin algoritmaları ve bulut filo yönetimi geliştirme aşamasında.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:var(--space-8);">
+      <div class="footer-copy">© 2026 Külünk Teknoloji · İstanbul Teknopark</div>
+      <div class="footer-legal">
+        <a href="/">Ana Sayfa</a>
+        <a href="/iletisim/">İletişim</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module">
+  import Navbar from '/assets/js/core/navbar.js';
+  import Scroll from '/assets/js/core/scroll.js';
+  document.addEventListener('DOMContentLoaded', () => {
+    Navbar.init();
+    Scroll.init();
+  });
+</script>
+</body>
+</html>
+

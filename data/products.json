@@ -1,0 +1,119 @@
+[
+  {
+    "id": "km-1",
+    "series": "KM-1",
+    "name": "KM-1 Kompakt",
+    "tagline": "Küçük Teknelerde Büyük Stabilizasyon",
+    "target": "8–20 m Motoryat & Tekne",
+    "featured": false,
+    "badge": null,
+    "description": "KM-1 Kompakt, 8 ila 20 metre uzunluğundaki tekneler için özel olarak mühendislenmiş hafif ve kompakt bir gyro stabilizasyon çözümüdür. Titanyum gövdesi ve yüksek mukavemetli alaşım bileşenleri sayesinde denizin en zorlu koşullarına karşı üstün bir dayanıklılık sergiler. Sistem, aktif kontrol algoritmasıyla her deniz durumuna gerçek zamanlı adapte olur ve yalpa hareketini yüzde yetmiş beşin üzerinde azaltır. Geminin gövdesine herhangi bir değişiklik yapılmasını gerektirmeyen tam iç mekan kurulumu, KM-1'i hem yeni inşa hem de mevcut tekneler için ideal kılar. 52 dB'in altındaki ses düzeyiyle lüks kabin ortamını bozmaksızın çalışır. Modüler CAN bus entegrasyonu, KM-1'i geminin mevcut otomasyon sistemiyle dakikalar içinde bağlamayı mümkün kılar.",
+    "specs": {
+      "moment": "40 kNm",
+      "weight": "~180 kg",
+      "idle_power": "2.5 kW",
+      "active_power": "4 kW",
+      "noise": "< 52 dB",
+      "ip_rating": "IP67",
+      "material": "Titanyum + Alüminyum alaşım",
+      "communication": "CAN bus J1939",
+      "warranty": "3 yıl"
+    },
+    "features": [
+      "Titanyum gövde, korozyon direnci maksimum",
+      "IP67 tam su geçirmezlik sertifikası",
+      "52 dB altı sessiz çalışma garantisi",
+      "CAN bus J1939 iletişim protokolü",
+      "Mobil uygulama ile gerçek zamanlı izleme",
+      "Gövde modifikasyonu gerektirmeyen kurulum",
+      "Enerji geri kazanım modülü dahil",
+      "Otomatik deniz durumu adaptasyonu"
+    ],
+    "use_cases": [
+      "Özel motoryatlar ve sürat tekneleri",
+      "Su altı araştırma tekneleri",
+      "Dalış ve su sporları platformları",
+      "Kısa mesafeli feribot ve transfer tekneleri"
+    ],
+    "imagePrompt": "KM-1 compact marine gyro stabilizer small yacht installation technical product photography blue ocean"
+  },
+  {
+    "id": "km-3",
+    "series": "KM-3",
+    "name": "KM-3 Standart",
+    "tagline": "Ürün Yelpazemizin Kalbi",
+    "target": "20–35 m Motoryat & İş Gemisi",
+    "featured": true,
+    "badge": "POPÜLER",
+    "description": "KM-3 Standart, Külünk Teknoloji'nin ürün yelpazemizin bel kemiğini oluşturmaktadır. 20 ila 35 metre uzunluğundaki motoryatlar ve iş gemileri için tasarlanmış bu model, 120 kilonewton metrelik stabilizasyon momentiyle orta ila ağır deniz koşullarında üstün performans sunar. Akıllı salınım kontrolü algoritması, anlık IMU verileri ve dalga periyodu analizini birleştirerek optimum gimbal açısını hesaplar; böylece her dalga frekansında maksimum etkinlik sağlanır. Uzak izleme sistemi sayesinde teknik servis ekipleri sistemi bulut üzerinden takip edebilir, önleyici bakım planlaması yapabilir ve yazılım güncellemelerini kablosuz olarak gerçekleştirebilir. Çift fazlı PMSM motor teknolojisi, hem yüksek tork hem de enerji verimliliğini bir arada sunar. KM-3, aynı segmentteki uluslararası rakiplerle karşılaştırıldığında yüzde otuz daha hafif ve yüzde yirmi beş daha az enerji tüketmektedir.",
+    "specs": {
+      "moment": "120 kNm",
+      "weight": "~480 kg",
+      "idle_power": "5 kW",
+      "active_power": "9 kW",
+      "noise": "< 52 dB",
+      "ip_rating": "IP67",
+      "material": "Titanyum + Paslanmaz çelik",
+      "communication": "CAN bus / Ethernet / RS-485",
+      "warranty": "3 yıl"
+    },
+    "features": [
+      "Akıllı salınım kontrolü algoritması",
+      "CAN bus ve Ethernet çift iletişim kanalı",
+      "Bulut tabanlı uzak izleme ve teşhis",
+      "Otomatik devreye giriş ve çıkış",
+      "Enerji geri kazanım modülü (Regen)",
+      "Yazılım OTA (over-the-air) güncelleme",
+      "Çift fazlı PMSM motor teknolojisi",
+      "Titreşim izolasyon platformu"
+    ],
+    "use_cases": [
+      "Orta ve büyük boy motoryatlar",
+      "Offshore hizmet tekneleri",
+      "İş ve charter gemiciliği",
+      "Araştırma ve bilimsel seferler",
+      "Balıkçı ve paraketa tekneleri"
+    ],
+    "imagePrompt": "KM-3 standard marine gyro stabilizer 30-meter yacht sea professional installation engineering photorealistic"
+  },
+  {
+    "id": "km-7",
+    "series": "KM-7",
+    "name": "KM-7 Profesyonel",
+    "tagline": "Büyük Platformlar İçin Mutlak Kontrol",
+    "target": "35 m+ Superyat, Savunma & Ticari",
+    "featured": false,
+    "badge": null,
+    "description": "KM-7 Profesyonel, Külünk Teknoloji mühendislik birikiminin zirve noktasını temsil etmektedir. 35 metrenin üzerindeki süper yatlar, askeri platformlar, araştırma gemileri ve ticari deniz araçları için geliştirilmiş bu model, 340 kilonewton metrelik devasa stabilizasyon momentiyle sektörün en yüksek performanslı yerli sistemlerinden biridir. Çift ünite senkron konfigürasyonu, tek bir sistemin kapasitesinin ötesindeki uygulamalarda iki KM-7 ünitesinin eş zamanlı ve koordineli çalışmasını mümkün kılar. Uluslararası Denizcilik Örgütü MSC.1/Circ.1627 teknik kılavuzuna tam uyumluluk, sistemin ticari ve askeri deniz kuvvetleri tarafından onaylı tedarikçi listelerine girmesinin önünü açar. Uydu bağlantısı ve özel API entegrasyonu sayesinde KM-7, herhangi bir filo yönetim platformuna veya gemi entegrasyon sistemine sorunsuzca dahil edilebilir. Özel entegrasyon hizmetimiz kapsamında müşteri teknesinin otomasyon, navigasyon ve güç yönetim sistemleriyle tam entegrasyon sağlanır.",
+    "specs": {
+      "moment": "340 kNm",
+      "weight": "~1100 kg",
+      "idle_power": "12 kW",
+      "active_power": "22 kW",
+      "noise": "< 54 dB",
+      "ip_rating": "IP68",
+      "material": "Titanyum + Yüksek mukavemetli çelik",
+      "communication": "CAN bus / Ethernet / RS-485 / Uydu",
+      "warranty": "5 yıl"
+    },
+    "features": [
+      "Çift ünite senkron konfigürasyon desteği",
+      "IMO MSC.1/Circ.1627 uyumluluk sertifikası",
+      "Uydu bağlantısı ile global izleme",
+      "Özel API ve filo yönetim entegrasyonu",
+      "IP68 tam deniz suyu geçirmezliği",
+      "Redundant (yedekli) kontrol sistemi",
+      "Özel mühendislik entegrasyon hizmeti",
+      "5 yıl kapsamlı garanti ve bakım sözleşmesi"
+    ],
+    "use_cases": [
+      "Süper yatlar (35 m ve üzeri)",
+      "Askeri devriye ve görev gemileri",
+      "Sahil Güvenlik operasyon platformları",
+      "Offshore araştırma ve sondaj tekneleri",
+      "Rüzgar enerjisi kurulum ve bakım gemileri",
+      "Feribot ve RoRo taşımacılığı"
+    ],
+    "imagePrompt": "KM-7 professional large marine gyro stabilizer superyacht military vessel heavy engineering photorealistic dramatic"
+  }
+]

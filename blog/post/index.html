@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="meta-desc" content="">
+  <meta property="og:title" id="og-title" content="Blog — Külünk Teknoloji">
+  <meta property="og:description" id="og-desc" content="">
+  <meta property="og:image" id="og-image" content="/public/images/og-image.svg">
+  <title id="page-title">Blog — Külünk Teknoloji</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=Rajdhani:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* ── Post Hero ── */
+    .post-hero {
+      position: relative;
+      min-height: 55vh;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+    .post-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-hero);
+      z-index: 0;
+    }
+    .post-hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.22;
+    }
+    .post-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--color-bg-base) 0%, rgba(5,10,20,0.5) 60%, transparent 100%);
+      z-index: 2;
+    }
+    .post-hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: var(--container-xl);
+      margin-inline: auto;
+      padding-inline: var(--section-px);
+      padding-bottom: var(--space-12);
+    }
+    .post-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-label);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      margin-bottom: var(--space-6);
+    }
+    .post-back-link:hover { color: var(--color-primary-300); }
+    .post-cat-badge {
+      display: inline-block;
+      background: rgba(0,102,204,0.2);
+      border: 1px solid rgba(0,102,204,0.4);
+      border-radius: var(--radius-full);
+      padding: var(--space-1) var(--space-4);
+      font-family: var(--font-label);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--color-accent-300);
+      margin-bottom: var(--space-4);
+    }
+    .post-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 1rem + 3vw, 3rem);
+      font-weight: 700;
+      line-height: var(--leading-tight);
+      color: var(--color-text-primary);
+      max-width: 22ch;
+      margin-bottom: var(--space-6);
+    }
+    .post-meta-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      flex-wrap: wrap;
+    }
+    .post-meta-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .post-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-label);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .post-meta-name {
+      font-family: var(--font-label);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+    .post-meta-date {
+      font-family: var(--font-label);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .post-meta-read {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-full);
+      padding: var(--space-1) var(--space-3);
+    }
+
+    /* ── Article Layout ── */
+    .post-body-wrap {
+      padding-block: var(--space-16);
+    }
+    .post-body-inner {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--section-px);
+    }
+
+    /* ── Article Typography ── */
+    .post-article {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      color: var(--color-text-secondary);
+    }
+    .post-article p { margin-bottom: var(--space-5); }
+    .post-article h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-top: var(--space-12);
+      margin-bottom: var(--space-4);
+      letter-spacing: var(--tracking-tight);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .post-article h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-top: var(--space-8);
+      margin-bottom: var(--space-3);
+    }
+    .post-article strong { color: var(--color-text-primary); font-weight: 600; }
+    .post-article em { color: var(--color-accent-300); font-style: italic; }
+    .post-article ul, .post-article ol {
+      margin-bottom: var(--space-5);
+      padding-left: var(--space-6);
+    }
+    .post-article li { margin-bottom: var(--space-2); }
+    .post-article blockquote {
+      border-left: 3px solid var(--color-primary-500);
+      padding-left: var(--space-6);
+      margin-block: var(--space-8);
+      font-size: var(--text-xl);
+      font-style: italic;
+      color: var(--color-text-muted);
+    }
+    .post-article code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-sm);
+      padding: 0.1em 0.4em;
+      color: var(--color-accent-300);
+    }
+
+    /* ── Tags ── */
+    .post-tags-wrap {
+      margin-top: var(--space-10);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border-subtle);
+    }
+    .post-tags-label {
+      font-family: var(--font-label);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-3);
+    }
+    .post-tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .post-tag {
+      font-family: var(--font-label);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-text-muted);
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-full);
+      padding: var(--space-1) var(--space-3);
+      text-decoration: none;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .post-tag:hover { color: var(--color-primary-300); border-color: var(--color-primary-500); }
+
+    /* ── Footer CTA ── */
+    .post-footer-cta {
+      margin-top: var(--space-12);
+      padding: var(--space-8);
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+    .post-footer-cta h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .post-footer-cta p {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+    }
+
+    /* ── Related Posts ── */
+    .related-section {
+      background: var(--color-bg-elevated);
+      border-top: 1px solid var(--color-border-subtle);
+      padding-block: var(--space-16);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-8);
+    }
+
+    /* ── 404 ── */
+    .post-404 {
+      text-align: center;
+      padding-block: calc(80px + 8rem) 8rem;
+    }
+    .post-404-code {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    @media (max-width: 768px) {
+      .related-grid { grid-template-columns: 1fr; }
+      .post-meta-row { gap: var(--space-3); }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" role="navigation" aria-label="Ana Navigasyon">
+  <a href="/" class="nav-logo" aria-label="Külünk Teknoloji Ana Sayfa">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+      <rect width="44" height="44" rx="10" fill="url(#km-grad-post)"/>
+      <path d="M9 10 L9 34 L15 34 L15 24 L21 34 L28 34 L20 21 L27 10 L20 10 L15 19 L15 10 Z" fill="white"/>
+      <rect x="30" y="10" width="5" height="24" fill="rgba(255,255,255,0.9)"/>
+      <defs>
+        <linearGradient id="km-grad-post" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0066CC"/>
+          <stop offset="100%" stop-color="#0099CC"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="nav-logo-wordmark"><strong>Külünk</strong> Teknoloji</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/#teknoloji" class="nav-link">Teknoloji</a></li>
+    <li><a href="/urunler/" class="nav-link">Ürünler</a></li>
+    <li><a href="/#sektorler" class="nav-link">Sektörler</a></li>
+    <li><a href="/blog/" class="nav-link nav-link--active">Blog</a></li>
+    <li><a href="/hakkimizda/" class="nav-link">Hakkımızda</a></li>
+    <li><a href="/iletisim/" class="nav-link">İletişim</a></li>
+  </ul>
+  <a href="/iletisim/" class="nav-cta">Teklif Al →</a>
+  <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-mobile-overlay">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+</nav>
+
+<div id="nav-mobile-overlay" class="nav-mobile-overlay">
+  <nav>
+    <ul role="list" style="display:flex;flex-direction:column;align-items:center;gap:2rem;list-style:none;">
+      <li><a href="/#teknoloji" class="nav-mobile-link">Teknoloji</a></li>
+      <li><a href="/urunler/" class="nav-mobile-link">Ürünler</a></li>
+      <li><a href="/#sektorler" class="nav-mobile-link">Sektörler</a></li>
+      <li><a href="/blog/" class="nav-mobile-link">Blog</a></li>
+      <li><a href="/hakkimizda/" class="nav-mobile-link">Hakkımızda</a></li>
+      <li><a href="/iletisim/" class="nav-mobile-link">İletişim</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="post-main">
+  <div class="container post-404" id="post-loading">
+    <p style="color:var(--color-text-muted);font-family:var(--font-mono);">Yükleniyor…</p>
+  </div>
+</main>
+
+<div id="related-mount"></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:var(--space-8);">
+      <div class="footer-copy">© 2026 Külünk Teknoloji · İstanbul Teknopark</div>
+      <div class="footer-legal">
+        <a href="/blog/">Blog</a>
+        <a href="/iletisim/">İletişim</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-container" id="toast-container" aria-live="polite" role="status"></div>
+
+<script type="module">
+  import Navbar from '/assets/js/core/navbar.js';
+
+  function esc(str) {
+    return String(str ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function slugFromPath() {
+    // ?slug=xxx for local dev without URL rewriting
+    const qs = new URLSearchParams(window.location.search).get('slug');
+    if (qs) return qs;
+    const parts = window.location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
+    return parts[parts.length - 1] ?? '';
+  }
+
+  function initials(name) {
+    return String(name).split(' ').slice(0, 2).map(w => w[0] ?? '').join('').toUpperCase();
+  }
+
+  function renderRelated(post) {
+    const img = post.image
+      ? `<img src="${esc(post.image)}" alt="${esc(post.title)}" loading="lazy" style="width:100%;height:200px;object-fit:cover;" onerror="this.classList.add('blog-card-image-placeholder');this.removeAttribute('src');this.style.height='200px';">`
+      : `<div class="blog-card-image-placeholder" style="height:200px;"></div>`;
+    return `
+      <article class="blog-card">
+        <a href="/blog/post/?slug=${esc(post.slug)}">
+          <div class="blog-card-image">
+            ${img}
+            <div class="blog-card-category" data-cat="${esc(post.category)}">${esc(post.category)}</div>
+          </div>
+        </a>
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">
+            <a href="/blog/post/?slug=${esc(post.slug)}" style="color:inherit;">${esc(post.title)}</a>
+          </h3>
+          <p class="blog-card-summary">${esc(post.summary)}</p>
+          <div class="blog-card-footer">
+            <div class="blog-card-meta">
+              <span class="blog-card-info">${esc(post.date)} · ${esc(post.readTime)}</span>
+            </div>
+            <a href="/blog/post/?slug=${esc(post.slug)}" class="blog-card-read-more" aria-label="Okumaya devam et">→</a>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  function render404() {
+    document.getElementById('post-main').innerHTML = `
+      <div class="container post-404">
+        <div class="post-404-code">404</div>
+        <h1 style="font-family:var(--font-heading);font-size:var(--text-4xl);color:var(--color-text-primary);margin-bottom:var(--space-4);">Yazı Bulunamadı</h1>
+        <p style="color:var(--color-text-muted);margin-bottom:var(--space-8);">Aradığınız blog yazısı mevcut değil veya kaldırılmış olabilir.</p>
+        <a href="/blog/" class="btn btn-primary">← Bloğa Dön</a>
+      </div>`;
+  }
+
+  function renderPost(post, allPosts) {
+    document.title = `${post.title} — Külünk Teknoloji`;
+    document.getElementById('meta-desc').content   = post.summary;
+    document.getElementById('og-title').content    = post.title;
+    document.getElementById('og-desc').content     = post.summary;
+    if (post.image) document.getElementById('og-image').content = post.image;
+
+    const av = initials(post.author);
+
+    document.getElementById('post-main').innerHTML = `
+      <!-- Hero -->
+      <div class="post-hero">
+        <div class="post-hero-bg"></div>
+        ${post.image ? `<img class="post-hero-img" src="${esc(post.image)}" alt="${esc(post.title)}" onerror="this.remove();">` : ''}
+        <div class="post-hero-overlay"></div>
+        <div class="post-hero-content">
+          <a href="/blog/" class="post-back-link">← Tüm Yazılar</a>
+          <div class="post-cat-badge">${esc(post.category)}</div>
+          <h1 class="post-hero-title">${esc(post.title)}</h1>
+          <div class="post-meta-row">
+            <div class="post-meta-author">
+              <div class="post-avatar" aria-hidden="true">${av}</div>
+              <span class="post-meta-name">${esc(post.author)}</span>
+            </div>
+            <span class="post-meta-date">${esc(post.date)}</span>
+            <span class="post-meta-read">${esc(post.readTime)} okuma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="post-body-wrap">
+        <div class="post-body-inner">
+          <article class="post-article">${post.content}</article>
+
+          <div class="post-tags-wrap">
+            <div class="post-tags-label">Etiketler</div>
+            <div class="post-tags-list">
+              ${(post.tags ?? []).map(t => `<a href="/blog/#${esc(t)}" class="post-tag">#${esc(t)}</a>`).join('')}
+            </div>
+          </div>
+
+          <div class="post-footer-cta">
+            <h3>Ürünlerimiz Hakkında Bilgi Alın</h3>
+            <p>KM serisi gyro stabilizasyon sistemlerini keşfedin veya bizimle iletişime geçin.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+              <a href="/urunler/" class="btn btn-primary">Ürünleri İncele</a>
+              <a href="/iletisim/" class="btn btn-secondary">İletişime Geç</a>
+            </div>
+          </div>
+
+          <div style="margin-top:var(--space-10);">
+            <a href="/blog/" class="post-back-link">← Tüm Yazılar</a>
+          </div>
+        </div>
+      </div>`;
+
+    // Related posts
+    const related = allPosts
+      .filter(p => p.slug !== post.slug &&
+        (p.category === post.category || (p.tags ?? []).some(t => (post.tags ?? []).includes(t))))
+      .slice(0, 3);
+
+    if (related.length > 0) {
+      document.getElementById('related-mount').innerHTML = `
+        <div class="related-section">
+          <div class="container">
+            <span class="section-label">Devam Edin</span>
+            <h2 class="section-title" style="font-size:var(--text-4xl);margin-bottom:0;">İlgili Yazılar</h2>
+            <div class="related-grid">${related.map(renderRelated).join('')}</div>
+          </div>
+        </div>`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    Navbar.init();
+
+    const slug = slugFromPath();
+    if (!slug || slug === 'post') { render404(); return; }
+
+    try {
+      const res = await fetch('/data/blog-posts.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const posts = await res.json();
+      const post  = posts.find(p => p.slug === slug);
+      if (!post) { render404(); return; }
+      renderPost(post, posts);
+    } catch (err) {
+      console.error('[Post]', err);
+      render404();
+    }
+  });
+</script>
+</body>
+</html>
+

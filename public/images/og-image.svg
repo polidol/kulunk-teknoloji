@@ -1,0 +1,86 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050A14"/>
+      <stop offset="60%" stop-color="#071020"/>
+      <stop offset="100%" stop-color="#050A14"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#0066CC" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0066CC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow blobs -->
+  <circle cx="900" cy="315" r="280" fill="#0066CC" opacity="0.12" filter="url(#blur1)"/>
+  <circle cx="200" cy="100" r="180" fill="#0099CC" opacity="0.07" filter="url(#blur1)"/>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(0,102,204,0.07)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(0,102,204,0.07)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="rgba(0,102,204,0.07)" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="rgba(0,102,204,0.07)" stroke-width="1"/>
+
+  <!-- Gyro rings (decorative, right side) -->
+  <g transform="translate(960, 315)">
+    <ellipse cx="0" cy="0" rx="190" ry="55" stroke="#0099CC" stroke-width="2.5" fill="none" opacity="0.35"/>
+    <ellipse cx="0" cy="0" rx="145" ry="70" stroke="#0099CC" stroke-width="2" fill="none" opacity="0.25"/>
+    <ellipse cx="0" cy="0" rx="30" ry="120" stroke="#0099CC" stroke-width="2" fill="none" opacity="0.2"/>
+    <circle cx="0" cy="0" r="20" fill="rgba(0,102,204,0.5)" stroke="#0099CC" stroke-width="2"/>
+    <circle cx="0" cy="0" r="220" stroke="rgba(0,153,204,0.12)" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Left accent line -->
+  <rect x="80" y="80" width="3" height="470" fill="url(#brand)" rx="2" opacity="0.6"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(116, 80)">
+    <rect width="52" height="52" rx="12" fill="url(#logoGrad)"/>
+    <path d="M10 12 L10 40 L17 40 L17 29 L24 40 L32 40 L23 25 L31 12 L23 12 L17 22 L17 12 Z" fill="white"/>
+    <rect x="35" y="12" width="6" height="28" fill="rgba(255,255,255,0.9)"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="184" y="113" font-family="'Barlow Condensed', Arial, sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.95" letter-spacing="1">KÜLÜNK TEKNOLOJİ</text>
+
+  <!-- Divider -->
+  <rect x="116" y="152" width="520" height="2" fill="url(#brand)" rx="1" opacity="0.4"/>
+
+  <!-- Main headline -->
+  <text x="116" y="270" font-family="'Barlow Condensed', Georgia, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="2">DALGALARI</text>
+  <text x="116" y="355" font-family="'Barlow Condensed', Georgia, sans-serif" font-size="72" font-weight="700" fill="url(#brand)" letter-spacing="2">KONTROL ET</text>
+
+  <!-- Subtitle -->
+  <text x="116" y="415" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="22" fill="rgba(200,220,240,0.7)" font-weight="300" letter-spacing="0.5">Yerli Gyro Stabilizasyon · İstanbul Teknopark · KM Serisi</text>
+
+  <!-- Bottom badges -->
+  <g transform="translate(116, 470)">
+    <rect width="140" height="36" rx="18" fill="rgba(0,102,204,0.2)" stroke="rgba(0,102,204,0.4)" stroke-width="1"/>
+    <text x="70" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#60B0FF" letter-spacing="1">KM-1 KOMPAKT</text>
+  </g>
+  <g transform="translate(272, 470)">
+    <rect width="150" height="36" rx="18" fill="rgba(0,102,204,0.2)" stroke="rgba(0,102,204,0.4)" stroke-width="1"/>
+    <text x="75" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#60B0FF" letter-spacing="1">KM-3 STANDART</text>
+  </g>
+  <g transform="translate(438, 470)">
+    <rect width="180" height="36" rx="18" fill="rgba(0,102,204,0.2)" stroke="rgba(0,102,204,0.4)" stroke-width="1"/>
+    <text x="90" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#60B0FF" letter-spacing="1">KM-7 PROFESYONEL</text>
+  </g>
+
+  <!-- Domain -->
+  <text x="116" y="580" font-family="'IBM Plex Mono', monospace, sans-serif" font-size="16" fill="rgba(150,180,210,0.5)" letter-spacing="2">kulunkmakine.com</text>
+</svg>

@@ -1,0 +1,74 @@
+{
+  "version": 2,
+  "name": "kulunk-teknoloji",
+
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "**/*.html", "use": "@vercel/static" }
+  ],
+
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/blog",           "dest": "/blog/index.html" },
+    { "src": "/blog/",          "dest": "/blog/index.html" },
+    { "src": "/blog/post",      "dest": "/blog/post/index.html" },
+    { "src": "/blog/post/",     "dest": "/blog/post/index.html" },
+    { "src": "/blog/([^/]+)/?", "dest": "/blog/post/index.html" },
+    { "src": "/urunler",     "dest": "/urunler/index.html" },
+    { "src": "/urunler/",    "dest": "/urunler/index.html" },
+    { "src": "/hakkimizda",  "dest": "/hakkimizda/index.html" },
+    { "src": "/hakkimizda/", "dest": "/hakkimizda/index.html" },
+    { "src": "/iletisim",    "dest": "/iletisim/index.html" },
+    { "src": "/iletisim/",   "dest": "/iletisim/index.html" },
+    { "src": "/(.*)",        "dest": "/$1" }
+  ],
+
+  "headers": [
+    {
+      "source": "/assets/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/public/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/assets/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/assets/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/data/(.*)\\.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=3600" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://cdn.kie.ai https://*.kie.ai https://tempfile.aiquickdraw.com https://*.aiquickdraw.com https://d20rwh69pn04qo.cloudfront.net https://cdn.higgsfield.ai https://*.cloudfront.net https://images.unsplash.com; connect-src 'self' https://api.kie.ai https://formspree.io; media-src 'self' blob:; frame-src 'self' https://www.youtube.com https://player.vimeo.com"
+        },
+        { "key": "X-Frame-Options",       "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy",     "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+#sektorler {
+  background: var(--color-bg-surface);
+}
+
+.sektorler-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.sektorler-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.sektor-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.sektor-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-brand);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-slow);
+  z-index: 0;
+  opacity: 0.08;
+}
+
+.sektor-card:hover {
+  border-color: var(--color-primary-500);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.sektor-card:hover::before {
+  transform: scaleY(1);
+}
+
+.sektor-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sektor-icon {
+  font-size: 32px;
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.sektor-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+.sektor-card:hover .sektor-name {
+  color: var(--color-primary-300);
+}
+
+.sektor-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-normal);
+}
+
+@media (max-width: 1024px) {
+  .sektorler-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .sektorler-grid { grid-template-columns: 1fr; }
+}
