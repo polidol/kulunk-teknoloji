@@ -3,6 +3,7 @@
 .env.production
 .env.development
 .vercel
+.claude/
 node_modules/
 *.log
 .DS_Store

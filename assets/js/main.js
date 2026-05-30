@@ -35,46 +35,49 @@ const Toast = (() => {
   return { show };
 })();
 
-// Contact form handler
+// Contact form handler — mailto tabanlı (Formspree gerektirmez)
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = form.querySelector('[type="submit"]');
-    const originalText = btn.textContent;
 
-    btn.textContent = 'Gönderiliyor...';
-    btn.disabled = true;
+    const name    = (form.querySelector('#name')?.value    ?? '').trim();
+    const email   = (form.querySelector('#email')?.value   ?? '').trim();
+    const phone   = (form.querySelector('#phone')?.value   ?? '').trim();
+    const subject = (form.querySelector('#subject')?.value ?? 'Teklif Talebi').trim();
+    const message = (form.querySelector('#message')?.value ?? '').trim();
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        form.reset();
-        Toast.show({
-          title: 'Mesajınız İletildi!',
-          message: 'Ekibimiz 24 saat içinde size ulaşacak.',
-          type: 'success'
-        });
-      } else {
-        throw new Error('Sunucu hatası');
-      }
-    } catch {
+    if (!name || !email || !message) {
       Toast.show({
-        title: 'Gönderim Başarısız',
-        message: 'Lütfen tekrar deneyin veya doğrudan e-posta gönderin.',
+        title: 'Eksik Alan',
+        message: 'Ad Soyad, E-posta ve Mesaj alanları zorunludur.',
         type: 'error'
       });
-    } finally {
-      btn.textContent = originalText;
-      btn.disabled = false;
+      return;
     }
+
+    const body = [
+      `Ad Soyad : ${name}`,
+      `E-posta  : ${email}`,
+      phone ? `Telefon  : ${phone}` : null,
+      ``,
+      message,
+    ].filter(l => l !== null).join('\n');
+
+    const mailto = `mailto:info@kulunkmakine.com`
+      + `?subject=${encodeURIComponent(subject || 'Web Sitesi İletişim Formu')}`
+      + `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
+    form.reset();
+    Toast.show({
+      title: 'E-posta İstemciniz Açılıyor',
+      message: 'Taslak hazırlandı — Gönder\'e tıklayarak iletin.',
+      type: 'success'
+    });
   });
 }
 
