@@ -3,23 +3,21 @@
 
   "builds": [
     { "src": "api/**/*.js", "use": "@vercel/node" },
-    { "src": "**/*.html", "use": "@vercel/static" }
+    { "src": "**", "use": "@vercel/static" }
   ],
 
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/blog",           "dest": "/blog/index.html" },
-    { "src": "/blog/",          "dest": "/blog/index.html" },
-    { "src": "/blog/post",      "dest": "/blog/post/index.html" },
-    { "src": "/blog/post/",     "dest": "/blog/post/index.html" },
-    { "src": "/blog/([^/]+)/?", "dest": "/blog/post/index.html" },
-    { "src": "/urunler",     "dest": "/urunler/index.html" },
-    { "src": "/urunler/",    "dest": "/urunler/index.html" },
-    { "src": "/hakkimizda",  "dest": "/hakkimizda/index.html" },
-    { "src": "/hakkimizda/", "dest": "/hakkimizda/index.html" },
-    { "src": "/iletisim",    "dest": "/iletisim/index.html" },
-    { "src": "/iletisim/",   "dest": "/iletisim/index.html" },
-    { "src": "/(.*)",        "dest": "/$1" }
+  "rewrites": [
+    { "source": "/blog",           "destination": "/blog/index.html" },
+    { "source": "/blog/",          "destination": "/blog/index.html" },
+    { "source": "/blog/post",      "destination": "/blog/post/index.html" },
+    { "source": "/blog/post/",     "destination": "/blog/post/index.html" },
+    { "source": "/blog/:slug",     "destination": "/blog/post/index.html" },
+    { "source": "/urunler",        "destination": "/urunler/index.html" },
+    { "source": "/urunler/",       "destination": "/urunler/index.html" },
+    { "source": "/hakkimizda",     "destination": "/hakkimizda/index.html" },
+    { "source": "/hakkimizda/",    "destination": "/hakkimizda/index.html" },
+    { "source": "/iletisim",       "destination": "/iletisim/index.html" },
+    { "source": "/iletisim/",      "destination": "/iletisim/index.html" }
   ],
 
   "headers": [
