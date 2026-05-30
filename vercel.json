@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "kulunk-teknoloji",
 
   "builds": [
     { "src": "api/**/*.js", "use": "@vercel/node" },
