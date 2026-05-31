@@ -1,0 +1,45 @@
+Options -Indexes
+RewriteEngine On
+
+# API proxy: /api/generate-image → generate-image.php
+RewriteRule ^api/generate-image$ /api/generate-image.php [L]
+RewriteRule ^api/generate-image/$ /api/generate-image.php [L]
+
+# SPA benzeri yönlendirmeler
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/?$              /blog/index.html [L]
+RewriteRule ^blog/post/?$         /blog/post/index.html [L]
+RewriteRule ^blog/([^/]+)/?$      /blog/post/index.html [L]
+RewriteRule ^urunler/?$           /urunler/index.html [L]
+RewriteRule ^hakkimizda/?$        /hakkimizda/index.html [L]
+RewriteRule ^iletisim/?$          /iletisim/index.html [L]
+
+# Cache — statik dosyalar
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                  "access plus 1 day"
+  ExpiresByType application/javascript    "access plus 1 day"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType application/json          "access plus 5 minutes"
+  ExpiresByType text/html                 "access plus 1 hour"
+</IfModule>
+
+# Gzip sıkıştırma
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# CORS — JSON verisi için
+<FilesMatch "\.json$">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Güvenlik başlıkları
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

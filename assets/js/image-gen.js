@@ -6,6 +6,9 @@
 const ImageGen = (() => {
   'use strict';
 
+  // Vercel → /api/generate-image (Node.js)
+  // cPanel  → /api/generate-image.php (PHP)
+  // Otomatik algıla: PHP dosyası varsa onu kullan
   const ENDPOINT = '/api/generate-image';
 
   async function generate(prompt, aspectRatio = '16:9') {
